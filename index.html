@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chainsaw-Man</title>
+    <link rel="stylesheet" href="style.css">
+    <style>* {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Consolas';
+        color: white;
+        text-shadow: 2px 0px 0px black;
+        background-color: white;
+        background-image: 
+        linear-gradient(
+        #eece39, 
+        #B44031,
+        #650000,
+        black,
+        #eece39);
+    }
+    
+    .wrapper {
+        width: 550px;
+        margin: auto;
+        max-width: calc(100% - 20px);
+        padding: 10px;
+        position: relative;
+    }
+    
+    img.center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .img-responsive {
+        max-width: 100%; 
+        display:block; 
+        height: auto;
+    }
+    
+    .Logo {
+        background-size: cover;
+        padding-top: 10px; 
+        text-align: center;
+        border-radius: 15px;
+        border: 5px solid ;
+        width: 99.5%;
+    }
+    
+    .Logo h1 {
+        text-align: center;
+        font-size: auto;
+        font-family: 'audiowide';
+        color: white;
+    }
+    
+    .Logo img {
+        width: 225px;
+        border-radius: 50%;
+        border: 5px solid;
+    }
+    .Textleft { 
+        text-align: left; }
+        
+    .TextRight { 
+        text-align: right; }
+    
+    .Textcenter { 
+        text-align: center; }
+                
+    .Textjustify { 
+        text-align: justify; }
+    
+    .slider-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    
+    .slider {
+      width: 100%;
+      max-width: 520px;
+      text-align: center;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .slides {
+      display: flex;
+      overflow-x: scroll;
+      position: relative;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+    }
+    
+    .slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 100%;
+      scroll-snap-align: center;
+      margin-right: 0px;
+      box-sizing: border-box;
+      transform-origin: center center;
+      transform: scale(1);
+    }
+    
+    .slide__text {
+      font-size: 40px;
+      font-weight: bold;
+      font-family: sans-serif;
+    }
+    
+    .slide a {
+      background: none;
+      border: none;
+    }
+    
+    a.slide__prev,
+    .slider::before {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      left: 5%;
+    }
+    
+    a.slide__next,
+    .slider::after {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      right: 5%;
+    }
+    
+    .slider::before,
+    .slider::after,
+    .slide__prev,
+    .slide__next {
+      position: absolute;
+      top: 48%;
+      width: 35px;
+      height: 35px;
+      border: 5px solid black;
+      border-width: 0 4px 4px 0;
+      padding: 3px;
+      box-sizing: border-box;
+    }
+    
+    .slider::before,
+    .slider::after {
+      content: "";
+      z-index: 1;
+      background: none;
+      pointer-events: none;
+    }
+    
+    .slider__nav {
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      width: 200px;
+      margin-left: -100px;
+      text-align: center;
+    }
+    
+    .slider__navlink {
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 5px 2px 10px black;
+      margin: 0 10px 0 10px;
+    }
+    
+    .Character legend {
+        margin-top: 15px;
+        font-size: 25pt;
+        text-align: left;
+        margin-bottom: 10px;
+        font-family: 'audiowide';
+        padding: 0 20px;
+        border: 10px;
+        text-decoration: underline;
+    }
+    
+    .Character h2 {
+        text-transform: capitalize;
+        text-align: justify;
+        width: 95%;
+        font-size: 18pt;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom:15px;
+    }
+    
+    .Character p {
+        width: 95%;
+        font-size:16pt;
+        text-align: justify;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    fieldset {  
+        border: 5px solid;
+        border-radius: 5px;
+        margin-bottom: 5.5px;
+    }
+    
+    ul.D {
+        width: 95%;
+        font-size: 17pt;
+        margin-bottom: 5px;
+        font-family: 'audiowide';
+        text-align:center;
+    }
+    
+    .Denji img {
+        width: 520px;
+        margin-top: 10px;
+        float: left;
+        border-radius: 5px;
+        border: 5px solid ;
+    }
+    
+    .Aki img {
+        display: block;
+        width: 520px;
+        margin-left: 5px;
+        margin-top: 20px;
+        float: right;
+        border-radius: 5px;
+        border: 5px solid ;
+    }
+    
+    .Power img {
+        width: 520px;
+        margin-right: 5px;
+        margin-top: 20px;
+        float: left;
+        border-radius: 5px;
+        border: 5px solid ;
+    }
+    
+    @media screen and (max-width: 1920px) {
+        .wrapper {
+            width: auto;
+        }    
+        
+        .logo a {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        section {
+            display: block;
+        }
+    
+        section img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    
+    }</style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="Logo">
+                <img class="center" class="img-responsive" src="https://scontent.fbdo8-1.fna.fbcdn.net/v/t39.30808-6/288465655_561165408795474_3721902611883902249_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGDoHQvUvfkFDzFjsyRQM4RG4WU4_PaNOwbhZTj89o07JqQU5uVj0FKqDIt-ySfYS9KNi4GODMdCvhZhUdSrjnm&_nc_ohc=-lmrGamBqU0AX-lc9e0&_nc_zt=23&_nc_ht=scontent.fbdo8-1.fna&oh=00_AT9DgpDh2h3Ry9oR1PZ-Q_YibfwlOwxE79O9y_ZWJ7LHWQ&oe=62B8C682">
+                <h1 class="judul">Chainsaw-Man</h1>
+            </div>
+        </header>
+        <div class="Character">
+            <!-- Denji -->
+            <article class="Denji">
+                <div class="slider-container">
+                    <div class="slider">
+                      <div class="slides">
+                        <div id="slides__1" class="slide">
+                            <img src="https://i.pinimg.com/originals/34/fa/bd/34fabd2765dea8f5c1252ddb6b10e142.png" alt="Human Fotm (Pre-Fusion)">
+                          <a class="slide__prev" href="#slides__4" title="Next"></a>
+                          <a class="slide__next" href="#slides__2" title="Next"></a>
+                        </div>
+                        <div id="slides__2" class="slide">
+                            <img src="https://i.redd.it/v23gmtsospy81.jpg" alt="Human Form (Post-Fusion)">
+                          <a class="slide__prev" href="#slides__1" title="Prev"></a>
+                          <a class="slide__next" href="#slides__3" title="Next"></a>
+                        </div>
+                        <div id="slides__3" class="slide">
+                            <img src="https://preview.redd.it/2j8tphsznw881.jpg?width=640&crop=smart&auto=webp&s=902c8685734116c1dde466c597727425a0d7a334" alt="Hybrid Form">
+                          <a class="slide__prev" href="#slides__2" title="Prev"></a>
+                          <a class="slide__next" href="#slides__4" title="Next"></a>
+                        </div>
+                        <div id="slides__4" class="slide">
+                            <img src="https://preview.redd.it/ucuwyrh51i881.jpg?width=1515&format=pjpg&auto=webp&s=0e8e46f5b6b8ea32b0e60f9c0e943172016c7589" alt="Devil Form">
+                          <a class="slide__prev" href="#slides__3" title="Prev"></a>
+                          <a class="slide__next" href="#slides__1" title="Prev"></a>
+                        </div>
+                      </div>
+                      <div class="slider__nav">
+                        <a class="slider__navlink" href="#slides__1"></a>
+                        <a class="slider__navlink" href="#slides__2"></a>
+                        <a class="slider__navlink" href="#slides__3"></a>
+                        <a class="slider__navlink" href="#slides__4"></a>
+                      </div>
+                    </div>
+                  </div>
+                    <fieldset>
+                        <legend>Denji</legend>
+                        <h2>"Setiap orang punya mimpinya masing-masing. Tidak ada yang salah dengan itu. Tapi jika kamu menghalangi jalan kami, pergilah."</h2><br>
+                        <p>Denji adalah protagonis dari seri manga Chainsaw Man. Sebagai seorang anak muda, ia mewarisi hutang ayahnya dari Yakuza. Setelah bertemu Pochita, ia menjadi Pemburu Iblis untuk Yakuza dalam upaya untuk melunasi hutangnya. Setelah Yakuza, di bawah kendali Iblis, mengkhianatinya, dia meninggal dan Pochita menjadi hatinya. Dia sekarang menjadi Chainsaw devil dengan menarik tali di dadanya. Setelah bertemu Makima, dia menjadi Public Safety Devil Hunter.</p>
+                        <ul class="D">Human Form (Pre-Fusion)</ul><br>
+                    
+                        <p>Denji adalah seorang remaja laki-laki dengan rambut pirang dan acak-acakan. Dia memiliki mata kuning-coklat dan kantong di bawahnya, menghasilkan ekspresi bingung dan lelah. Giginya terlihat tajam dan bersudut. Karena kekurangan gizi di masa kecilnya, ia memiliki tubuh kurus dengan tulang rusuk yang menonjol. <br><br>
+
+                            Sebelum menjadi hibrida, Denji kehilangan mata kanannya dan beberapa organ non-esensial lainnya, termasuk testis dan ginjal. Dia menutupi matanya yang hilang dengan penutup mata. Dia juga mengenakan tank top putih longgar, jaket hijau dan celana hitam selama waktu ini.
+                        </p><br>
+                        <ul class="D">Human Form (Post-Fusion)</ul><br>
+                    
+                        <p>Setelah Denji membuat kontrak dengan Pochita, jantungnya menyatu dengan Pochita, tali gergaji terbentuk di tengah dadanya dan dia mendapatkan kembali organnya yang hilang. <br><br>
+
+                            Dia sekarang menghabiskan sebagian besar waktunya dengan mengenakan seragam standar Public Safety Devil Hunter, yang terdiri dari kemeja putih, dasi, dan celana panjang. Dia memakai seragam dengan sembarangan, kemejanya kusut dan lengan bajunya digulung. <b>Selama Operasi: Super-Smart</b>, Denji mengenakan sepasang kacamata palsu.</p><br>
+                        <ul class="D">Hybrid Form</ul><br>
+                    
+                        <p>Jika tali gergajinya ditarik saat dia memiliki cukup darah untuk transformasi, maka kepalanya akan berubah menjadi bentuk mekanis iblis dengan taring panjang bergerigi dan gagang gergaji di bagian belakang. Gergaji mesin besar akan muncul dari dahi, lengan dan kakinya, jika dia menginginkannya. Jika tali gergaji Denji ditarik saat dia tidak memiliki cukup darah, maka sebagian mata gergajinya akan keluar dari wajahnya.</p><br>
+                        <ul class="D">Devil Form</ul><br>
+                    
+                        <p>Setelah menyerahkan dirinya kepada Makima, Denji berubah menjadi Iblis Penuh, benar-benar kehilangan kesadaran manusianya dan membiarkan rekan iblisnya mengambil alih. Sebelum transformasi, ususnya keluar dari perutnya dan melingkari lehernya, menyerupai syal atau kerah. Setelah berubah, tubuhnya berwarna hitam, terlihat ditutupi dengan pelat atau sisik lapis baja. Dia mendapatkan paku di bahunya dan bagian belakang kepalanya, pegangan di bagian belakang kepalanya menghilang. Dia menjadi jauh lebih besar dan lebih besar, menjulang di atas rata-rata manusia. Dia memiliki empat lengan sebagai lawan dari dua, masing-masing dilengkapi dengan Blade Chainsaw mereka sendiri.</p>
+                  </fieldset>
+            </article>
+
+            <!-- Aki_Hayakawa -->
+            <article class="Aki" float="none">
+                <img class="img-responsive" src="https://i.redd.it/ae0fqs9oxxe71.jpg" alt="Aki Hayakawa" float="right">
+                    <fieldset>
+                        <legend>Aki Hayakawa</legend>
+                        <h2>"Musuh adalah musuh... kita hanya menggunakannya. Aku tidak punya niat untuk berteman dengannya."</h2>
+                        <p>Aki Hayakawa adalah Public Safety Devil Hunter, bekerja di bawah pasukan khusus Makima. Dia memiliki kontrak dengan Curse Devil dan Future Devil, dan mantan kontrak dengan Fox Devil. Dia dibunuh dan dirasuki oleh Iblis Senjata, sehingga menjadi seorang Gun Fiend.</p><br>
+                        <ul class="D">Human Form</ul>
+                        <p>Aki Hayakawa adalah seorang pemuda tampan dengan rambut hitam panjang sedang dan mata biru. Dia biasanya memakai rambutnya dengan gaya jambul. Dia sering memakai jas dan dasi Public Safety Devil Hunter. Dia juga memakai anting dan biasanya membawa pedang di punggungnya.</p><br>
+                        
+                        <ul class="D">Fiend Form</ul>
+                        <p>Setelah Gun Devil mengambil alih tubuhnya, ia menjadi Gun Fiend, rambutnya dibiarkan turun dengan mata dan dahi tertutup pembuluh darah gelap. Laras dan slide M1911 terlihat mencuat dari wajahnya di antara matanya dengan palu pistol mencuat di belakang kepalanya, lengan kiri Aki diganti dengan M16A1.</p>
+                  </fieldset>
+            </article>
+
+            <!-- Power -->
+            <article class="Power" float="none">
+                <img class="img-responsive" src="https://i.pinimg.com/originals/93/ab/c9/93abc918df0ea1a31c2ee8822c50ff68.jpg" alt="Power" float="left">
+                <fieldset>
+                    <legend>Power</legend>
+                    <h2>"Iblis tidak bisa berbohong! Hanya manusia yang berbohong!"</h2>
+                    <p>Power Adalah Blood Fiend Dan Public Safety Devil Hunter yang merupakan bagian dari pasukan khusus Makima.</p><br>
+                    <ul class="D">Fiend Form</ul><br>
+                    <p>Power memiliki penampilan seorang wanita muda dengan rambut pirang yang mencapai ke tengah punggungnya. Sebagai iblis, dia memiliki tanduk merah muda yang menonjol dari atas kepalanya, mata merah dan kuning yang membentuk pola silang, dan gigi tajam dengan taring yang jelas. <br><br>
+                    Power biasanya mengenakan kemeja standar, dasi, dan celana panjang yang dibutuhkan Pemburu Setan Keamanan Publik. Biasanya, dia memakai bantalan payudara untuk memperbesar payudaranya. Dia hampir selalu memakai jaketnya yang menggantung di tengah tubuhnya sehingga membuatnya terlihat tidak rapi dan setengah berpakaian. <br><br>
+                    Selama Operasi: Super-Smart, Power mengenakan kacamata dan mengikat rambutnya ke belakang dengan kuncir kuda. <br><br>
+                    Jika Power mengumpulkan terlalu banyak darah, tanduknya menjadi lebih besar dan lebih melengkung, dan dia dapat menumbuhkan sepasang tanduk tambahan dari kepalanya. <br>
+                    </p><br>
+                    
+                    <ul class="D">Devil Form</ul><br>
+                    <p>Dalam bentuk Blood Devil-nya, dia muncul sebagai humanoid tinggi dengan empat tangan dan sebagian besar tubuh putih. Kepalanya memiliki penampilan runcing dengan warna gelap, gigi tajam dan dua mata melingkar dengan pupil seperti salib; dia memiliki telinga yang panjang dalam bentuk ini dan rambut yang panjang. Dadanya memiliki tulang rusuk terbuka yang menunjukkan rongga dada yang penuh dengan usus hingga ke lehernya. Lengannya berwarna gelap mulai dari tangan hingga siku. Dia memiliki tangan tiga jari dan cakar besar. Kakinya memiliki warna gelap yang sama dari bagian tengah paha ke bawah, berakhir dengan kaki seperti tumit.</p>
+                </fieldset>
+            </article>
+        </div>
+    </div>
+</body>
+</html>
